@@ -41,3 +41,4 @@ Ok. You're free. Have fun!
 Now, maybe you want some guidance? We've got some tutorials for you:
 - [Map the Network](nmap.md)
 - [Hack the XP Boxes](windowxp.md)
+- [Hack the Linux Boxes](linux.md)
