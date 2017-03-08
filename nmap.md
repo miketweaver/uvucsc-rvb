@@ -74,7 +74,7 @@ That's 16 hosts, and we've only picked up 12? We must be missing the Windows Ser
 Well, the answer lies in the fact that all the commands we've used rely on a ping scan. These hosts must not be responding to ping. Let's try another, slower, command that actually attempts connections, without pinging. We'l want to do a full [syn scan](https://nmap.org/book/man-port-scanning-techniques.html#idp47152075737312) but that'll take a very long time. Since we're really only looking for the windows servers, we can do some tricks to speed the scan up. We know that Windows Servers usually have remote desktop open, so we're going to add `-p 3389` to the command. That will limit the command to port `3389` (remote desktop), and speed our scan up considerably. 
 
 - Make sure `10.0.0.4-255` in the `Targets`
-- In the `Command` section, put `nmap -p 3389 -Pn --open 10.0.0.3-255`.
+- In the `Command` section, put `nmap -p 3389 -Pn --open 10.0.0.4-255`.
 - Hit the `Scan` Button. (Takes about a minute and a half)
 
 This should respond with 4 hosts, our missing Windows Servers!
