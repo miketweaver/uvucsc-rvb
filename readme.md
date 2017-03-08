@@ -22,11 +22,12 @@ OK. Welcome to our RvB environment. We're going to need to connect to a VPN firs
 ## Network
 
 The network you're attacking is `10.0.0.1/24`. 
-There are 2 IPs which are out of scope (don't touch them!)
+There are 3 IPs which are out of scope (don't touch them!)
 - `10.0.0.1` - The Firewall/DHCP/DNS server
 - `10.0.0.2` - The Pritunl VPN server
+- `10.0.0.3` - The VM Host
 
-This means you can attack any machine between `10.0.0.3` to `10.0.0.255`. Don't DDOS anything, as the whole VM infrastructure is on one PC and we don't want to break it. Other than that, there are no rules. If you get into a box and want to cause mayhem, by all means do it. Ever wondered what would happen with `rm -rf /`? Now's a good time to try. :)
+This means you can attack any machine between `10.0.0.4` to `10.0.0.255`. Don't DDOS anything, as the whole VM infrastructure is on one PC and we don't want to break it. Other than that, there are no rules. If you get into a box and want to cause mayhem, by all means do it. Ever wondered what would happen with `rm -rf /`? Now's a good time to try. :)
 
 Here's a list of all the machines:
 - 9 Linux Servers
