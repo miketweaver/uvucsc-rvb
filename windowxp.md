@@ -4,7 +4,8 @@ There are multiple exploits for an un-patched windows xp box. Here is a guide on
 ## Step 1 - Metasploit
 Ok, we're going to be using metasploit for this attack. To get started run the following in a terminal:
 
-`sudo msfconsole`
+`sudo -E service postgresql start && sudo -E msfdb init && sudo -E msfconsole;`
+
 Be patient, it takes awhile for Metasploit to load all of its modules. The current version of Metasploit has 823 exploits and 250 payloads.
 
 ## Step 2 - Find the exploit 
