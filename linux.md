@@ -1,7 +1,7 @@
 # Example Exploit 
 There are multiple exploits for this Metasploitable2 box. Here is some information how how to do some of them.
 
-If you haven't gone and done the ![Windows XP](windowsxp.md) tutorial and you don't know how to use metasploit, go over there and test it out.
+If you haven't gone and done the [Windows XP](windowsxp.md) tutorial and you don't know how to use metasploit, go over there and test it out.
 
 ## exploit/unix/ftp/vsftpd_234_backdoor
 Go ahead and use metasploit for this attack. Follow the same principles as before. 
