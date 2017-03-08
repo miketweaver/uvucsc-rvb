@@ -21,3 +21,21 @@ That'll take a second to run, when it's done it'll write a file to your desktop 
 
 ## Step 2 - OS Detect
 Alright, we've got 13 hosts saved to a file now. That's great, but which ones are the windows or linux machines? That's where [OS Detect](https://nmap.org/book/man-os-detection.html) comes in. 
+
+Here's the command. You'll need sudo for `-O` (OS Detect). `-sV` Probes the open ports to determine service/version info. This helps considerably to determine the version. `-F` and `--version-light` all help make it run a lot faster.
+
+`sudo nmap -sV -T4 -O -F --version-light 10.0.0.3-255`
+
+![Image of OS Detect](images/nmap-osdetect.png)
+
+Perfect! We've now got a list of the machines and their OS Type.
+
+## Step 3 - Zenmap
+
+OK. This is great. We've got 13 hosts with OS Types. It's been kind of hard to keep track of them though. We created that text file earlier, but text sometimes isn't the prettiest to work with. That's where ZenMap comes in. It's a GUI for nmap.
+
+Open up your applications:
+
+![Image of Applications Menu](images/show-apps.png)
+
+Select `Zenmap (as root)`.
