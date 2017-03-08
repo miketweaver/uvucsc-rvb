@@ -32,10 +32,16 @@ Perfect! We've now got a list of the machines and their OS Type.
 
 ## Step 3 - Zenmap
 
-OK. This is great. We've got 13 hosts with OS Types. It's been kind of hard to keep track of them though. We created that text file earlier, but text sometimes isn't the prettiest to work with. That's where ZenMap comes in. It's a GUI for nmap.
+OK. This is great. We've got 13 hosts with OS Types. It's been kind of hard to keep track of them though. We created that text file earlier, but text isn't the prettiest to work with. That's where ZenMap comes in. It's a GUI for nmap.
 
 Open up your applications:
 
 ![Image of Applications Menu](images/show-apps.png)
 
 Select `Zenmap (as root)`.
+
+Let's re-create our ping scan with Zenmap.
+- Enter `10.0.0.3-255` in the `Targets`
+- Under `Profile` select `Ping Scan`
+- In the `Command` section, make sure it matches our previous ping scan command.
+- Hit the `Scan` Button.
