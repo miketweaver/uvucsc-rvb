@@ -44,7 +44,7 @@ Let's re-create our ping scan with Zenmap.
 - Enter `10.0.0.3-255` in the `Targets`
 - Under `Profile` select `Ping Scan`
 - In the `Command` section, make sure it matches our previous ping scan command.
-- Hit the `Scan` Button.
+- Hit the `Scan` Button. (Takes about 45 seconds)
 
 You should get the same output in the `Nmap Output` section, but you'll also get a list on the side of all our hosts. Sweet huh?
 
@@ -55,7 +55,7 @@ Let's re-create our ping scan with Zenmap.
 - Make sure `10.0.0.3-255` in the `Targets`
 - Under `Profile` select `Quick Scan Plus`
 - In the `Command` section, make sure it matches our previous os detect scan command.
-- Hit the `Scan` Button.
+- Hit the `Scan` Button. (Takes about a minute and a half)
 
 Now you should see all our hosts with their OS Type symbols on the left.
 
