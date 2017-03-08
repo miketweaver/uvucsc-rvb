@@ -79,4 +79,14 @@ Well, the answer lies in the fact that all the commands we've used rely on a pin
 
 This should respond with 4 hosts, our missing Windows Servers!
 
-![Image of Zenmap Missing Windows servers](images/windows-servers.png)
+![Image of Zenmap Missing Windows servers](images/window-servers.png)
+
+Now you can go 1 by 1 and scan each of the four with a OS Detect scan. You'll need to add `-Pn` to your scan for it to work.
+
+- Make sure the IP of your new host in the `Targets`
+- Under `Profile` select `Quick Scan Plus`
+- In the `Command` section, add `-Pn` right after `nmap`.
+- Hit the `Scan` Button. 
+- Repeat for all 4 hosts.
+
+![Image of Host](images/host.png)
