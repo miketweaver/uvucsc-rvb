@@ -41,7 +41,7 @@ Next, we check to see what payloads are available for this exploit. Type show pa
 ## Set Payload
 Now that we can see what payloads are available, we can select the generic/shell_reverse_tcp by using the Metasploit console set command. If successful, this will establish a remote shell on the target system that we can command.
 
-`msf > set PAYLOAD generic/shell_reverse_tcp`
+`msf > set PAYLOAD windows/meterpreter/bind_tcp`
 
 ## Set LocalHost
 Now that we can see what payloads are available, we can select the generic/shell_reverse_tcp by using the Metasploit console set command. If successful, this will establish a remote shell on the target system that we can command.
