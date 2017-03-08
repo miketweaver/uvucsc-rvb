@@ -29,9 +29,9 @@ Now that we've chosen our exploit, we can ask Metasploit what our options are. B
 `msf > show options`
 
 ## Set Remote host
-Metasploit will now ask us for the RHOST. This will be the IP address of the remote host or the machine we're attacking. In our case, it's 10.0.0.3. Use the actual IP address of the machine you are attacking. Tools such as nmap can help in identifying the IP address of the machine you are attacking. Notice in the picture above that Metasploit tells us that we will be using (binding) port 135.
+Metasploit will now ask us for the RHOST. This will be the IP address of the remote host or the machine we're attacking. In our case, it's `10.0.0.125`. Use the actual IP address of the machine you are attacking. Tools such as nmap can help in identifying the IP address of the machine you are attacking. Notice in the picture above that Metasploit tells us that we will be using (binding) port 135.
 
-`msf > set RHOST 10.0.0.3`
+`msf > set RHOST 10.0.0.125`
 
 ## Show Payloads
 Next, we check to see what payloads are available for this exploit. Type show payloads at the Metasploit prompt:
