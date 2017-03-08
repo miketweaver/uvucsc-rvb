@@ -111,13 +111,13 @@ This is what the Windows Server looks like:
 It's [Metasploitable2](https://community.rapid7.com/docs/DOC-1875). That's probably useful too.
 
 
-#### Windows Server
+#### Windows XP
 This is what the Windows Server looks like:
 
 ![Image of WinXP](images/winxp.png)
 
-It's [Windows XP](https://www.exploit-db.com/exploits/16749/). What a piece of junk.
+[Windows XP](https://www.exploit-db.com/exploits/16749/)... What a piece of junk.
 
-## Finished
+# Finished
 
 Good work. You've identified all the machines. Now it's time to hack them.
