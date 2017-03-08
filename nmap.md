@@ -96,6 +96,7 @@ Now you can go 1 by 1 and scan each of the four with a OS Detect scan. You'll ne
 Now you just have to match the IPs to their type. Here's what I found:
 
 ### Windows Server
+------
 This is what the ports look like:
 
 ![Image of Metasploitable3](images/meta3.png)
@@ -104,6 +105,7 @@ It's [Metasploitable3](https://github.com/rapid7/metasploitable3/wiki). That's p
 
 
 ### Linux Server
+------
 This is what the ports look like:
 
 ![Image of Metasploitable2](images/meta2.png)
@@ -112,6 +114,7 @@ It's [Metasploitable2](https://community.rapid7.com/docs/DOC-1875). That's proba
 
 
 ### Windows XP
+------
 This is what the ports look like:
 
 ![Image of WinXP](images/winxp.png)
