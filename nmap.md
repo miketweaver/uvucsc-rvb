@@ -90,3 +90,34 @@ Now you can go 1 by 1 and scan each of the four with a OS Detect scan. You'll ne
 - Repeat for all 4 hosts.
 
 ![Image of Host](images/host.png)
+
+## Matching
+
+Now you just have to match the IPs to their type. Here's what I found:
+
+#### Windows Server
+This is what the Windows Server looks like:
+
+![Image of Metasploitable3](images/meta3.png)
+
+It's [Metasploitable3](https://github.com/rapid7/metasploitable3/wiki). That's probably useful to know. ;-)
+
+
+#### Linux Server
+This is what the Windows Server looks like:
+
+![Image of Metasploitable2](images/meta2.png)
+
+It's [Metasploitable2](https://community.rapid7.com/docs/DOC-1875). That's probably useful too.
+
+
+#### Windows Server
+This is what the Windows Server looks like:
+
+![Image of WinXP](images/winxp.png)
+
+It's [Windows XP](https://www.exploit-db.com/exploits/16749/). What a piece of junk.
+
+## Finished
+
+Good work. You've identified all the machines. Now it's time to hack them.
